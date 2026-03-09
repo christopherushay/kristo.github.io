@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Work — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Libre+Baskerville:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .work-piece { margin-bottom: 3rem; }
+
+    .work-imgs { display: grid; gap: 0.4rem; margin-bottom: 0.8rem; }
+    .work-imgs.single { grid-template-columns: 1fr; }
+    .work-imgs.pair   { grid-template-columns: 1fr 1fr; }
+    .work-imgs.trio   { grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; }
+    .work-imgs.trio .img-block:first-child { grid-row: 1 / 3; }
+    .work-imgs .img-block { margin: 0; }
+
+    .work-name {
+      font-family: 'Cormorant', serif;
+      font-weight: 300;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.2rem;
+    }
+    .work-name em { font-style: italic; }
+
+    .work-desc {
+      font-size: 12px;
+      color: var(--mid);
+      line-height: 1.65;
+    }
+
+    .work-year {
+      font-size: 11px;
+      color: var(--mid);
+      margin-top: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="home">Your Name</a>
+    <span class="sep">&nbsp;/</span>
+    <ul class="links">
+      <li><a href="about.html">about</a></li>
+      <li><a href="research.html">research</a></li>
+      <li><a href="teaching.html">teaching</a></li>
+      <li><a href="creative.html" class="active">creative work</a></li>
+      <li><a href="cv.html">cv</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="page-title"><em>Creative Work</em></h1>
+  <p class="page-sub">practice, exhibitions, making</p>
+
+  <hr>
+
+  <!-- STATEMENT -->
+  <section style="margin-bottom: 2rem;">
+    <p class="s-label">practice</p>
+    <div class="prose">
+      <p>
+        A sentence or two about your creative practice — what media or forms you work in, what drives the work, how it relates to or diverges from your research.
+      </p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- WORK -->
+  <section style="margin-bottom: 2rem;">
+    <p class="s-label">selected work</p>
+
+    <!-- Single image -->
+    <div class="work-piece">
+      <div class="work-imgs single">
+        <div class="img-block" style="aspect-ratio: 4/3;">
+          <!-- <img src="images/project-1.jpg" alt="Project Title"> -->
+          <span>image</span>
+        </div>
+      </div>
+      <p class="work-name">Project Title</p>
+      <p class="work-desc">Medium, dimensions or duration. Brief description — what the work does, where it has been shown.</p>
+      <p class="work-year">2024</p>
+    </div>
+
+    <!-- Two images side by side -->
+    <div class="work-piece">
+      <div class="work-imgs pair">
+        <div class="img-block" style="aspect-ratio: 3/4; background: #DAD6CD;">
+          <!-- <img src="images/project-2a.jpg" alt="..."> -->
+          <span>image</span>
+        </div>
+        <div class="img-block" style="aspect-ratio: 3/4; background: #E4E0D7;">
+          <!-- <img src="images/project-2b.jpg" alt="detail"> -->
+          <span>detail</span>
+        </div>
+      </div>
+      <p class="work-name">Another Project</p>
+      <p class="work-desc">Medium. Exhibited at [venue], [city], [year].</p>
+      <p class="work-year">2023</p>
+    </div>
+
+    <!-- Single wide -->
+    <div class="work-piece">
+      <div class="work-imgs single">
+        <div class="img-block" style="aspect-ratio: 16/9; background: #EDEDE8;">
+          <!-- <img src="images/project-3.jpg" alt="..."> -->
+          <span>image</span>
+        </div>
+      </div>
+      <p class="work-name">Collaborative Work</p>
+      <p class="work-desc">With [collaborator]. Medium, context. Brief description.</p>
+      <p class="work-year">2023</p>
+    </div>
+
+    <!-- Trio layout -->
+    <div class="work-piece">
+      <div class="work-imgs trio">
+        <div class="img-block" style="min-height: 200px; background: #DAD6CD;">
+          <!-- <img src="images/project-4a.jpg" alt="..."> -->
+          <span>image</span>
+        </div>
+        <div class="img-block" style="background: #E4E0D7;">
+          <!-- <img src="images/project-4b.jpg" alt="..."> -->
+          <span>detail</span>
+        </div>
+        <div class="img-block" style="background: #EDEDE8;">
+          <!-- <img src="images/project-4c.jpg" alt="..."> -->
+          <span>detail</span>
+        </div>
+      </div>
+      <p class="work-name"><em>Earlier Work</em></p>
+      <p class="work-desc">Medium. Description.</p>
+      <p class="work-year">2022</p>
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- EXHIBITIONS -->
+  <section>
+    <p class="s-label">exhibitions &amp; presentations</p>
+    <ul class="entry-list">
+      <li class="entry">
+        <span class="e-year">2024</span>
+        <div>
+          <div class="e-title"><em>Exhibition Title</em></div>
+          <div class="e-sub">Venue, City</div>
+        </div>
+      </li>
+      <li class="entry">
+        <span class="e-year">2023</span>
+        <div>
+          <div class="e-title"><em>Group Show</em></div>
+          <div class="e-sub">Venue, City</div>
+        </div>
+      </li>
+      <li class="entry">
+        <span class="e-year">2022</span>
+        <div>
+          <div class="e-title"><em>Another Exhibition</em></div>
+          <div class="e-sub">Venue, City</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Your Name &nbsp;·&nbsp; <a href="index.html">home</a></p>
+  </footer>
+
+</body>
+</html>

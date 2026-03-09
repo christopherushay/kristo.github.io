@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Libre+Baskerville:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── INDEX-ONLY ── */
+    .hero {
+      width: 100%;
+      aspect-ratio: 3/2;
+      background: #E4E0D7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    .hero img  { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero span { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); }
+
+    .lede {
+      margin-bottom: 2.5rem;
+    }
+    .lede h1 {
+      font-family: 'Cormorant', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+    }
+    .lede h1 em { font-style: italic; }
+    .lede p {
+      font-size: 12px;
+      color: var(--mid);
+    }
+
+    /* Page index */
+    .page-index { list-style: none; }
+    .page-index li {
+      border-bottom: 1px solid var(--rule);
+    }
+    .page-index li:first-child { border-top: 1px solid var(--rule); }
+
+    .page-index a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.75rem 0;
+      text-decoration: none;
+      color: var(--accent);
+      gap: 1rem;
+      transition: padding-left 0.2s ease;
+    }
+    .page-index a:hover { padding-left: 0.3rem; text-decoration: none; }
+    .page-index a:visited { color: var(--visited); }
+
+    .pi-name {
+      font-family: 'Cormorant', serif;
+      font-weight: 300;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+    .pi-name em { font-style: italic; }
+
+    .pi-desc {
+      font-size: 11px;
+      color: var(--mid);
+      font-style: italic;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* Thumb strip */
+    .thumb-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+    .thumb {
+      aspect-ratio: 1;
+      background: #E4E0D7;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .thumb:nth-child(2) { background: #DAD6CD; }
+    .thumb:nth-child(3) { background: #EDEDE8; }
+    .thumb:hover { opacity: 0.85; }
+    .thumb img  { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .thumb span { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="home">Your Name</a>
+    <span class="sep">&nbsp;/</span>
+    <ul class="links">
+      <li><a href="about.html">about</a></li>
+      <li><a href="research.html">research</a></li>
+      <li><a href="teaching.html">teaching</a></li>
+      <li><a href="creative.html">creative work</a></li>
+      <li><a href="cv.html">cv</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <!-- Replace with: <img src="images/hero.jpg" alt="..."> -->
+    <span>hero image</span>
+  </div>
+
+  <!-- NAME + DESCRIPTOR -->
+  <div class="lede">
+    <h1>Your Name</h1>
+    <p>PhD · [your field] · [affiliation or location]</p>
+  </div>
+
+  <hr>
+
+  <!-- PAGE INDEX -->
+  <section style="margin-bottom: 2.5rem;">
+    <p class="s-label">pages</p>
+    <ul class="page-index">
+      <li><a href="about.html"><span class="pi-name">About</span><span class="pi-desc">background, interests</span></a></li>
+      <li><a href="research.html"><span class="pi-name">Research</span><span class="pi-desc">publications, projects</span></a></li>
+      <li><a href="teaching.html"><span class="pi-name">Teaching</span><span class="pi-desc">courses, materials</span></a></li>
+      <li><a href="creative.html"><span class="pi-name"><em>Creative Work</em></span><span class="pi-desc">practice, exhibitions</span></a></li>
+      <li><a href="cv.html"><span class="pi-name">CV</span><span class="pi-desc">full academic record</span></a></li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- RECENT WORK THUMBNAILS -->
+  <section style="margin-bottom: 2.5rem;">
+    <p class="s-label">recent work</p>
+    <div class="thumb-strip">
+      <a href="creative.html" class="thumb">
+        <!-- <img src="images/work-1.jpg" alt="..."> -->
+        <span>image</span>
+      </a>
+      <a href="research.html" class="thumb">
+        <!-- <img src="images/work-2.jpg" alt="..."> -->
+        <span>image</span>
+      </a>
+      <a href="creative.html" class="thumb">
+        <!-- <img src="images/work-3.jpg" alt="..."> -->
+        <span>image</span>
+      </a>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- BRIEF BIO -->
+  <section>
+    <p class="s-label">briefly</p>
+    <p style="font-family: 'Libre Baskerville', serif; font-size: 0.93rem; line-height: 1.9; color: #3A3530; margin-bottom: 0.8rem;">
+      I work across [your field] and creative practice. Recently completed a PhD at [your university] on [topic]. Now [what you're doing now].
+    </p>
+    <p style="font-size: 13px; color: var(--mid);">
+      <a href="mailto:your@email.com">your@email.com</a>
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Your Name &nbsp;·&nbsp; <a href="cv.html">cv</a> &nbsp;·&nbsp; <a href="https://github.com/yourusername" class="ext" target="_blank">github</a></p>
+  </footer>
+
+</body>
+</html>
